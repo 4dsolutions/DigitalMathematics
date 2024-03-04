@@ -41,7 +41,7 @@ class Dog(Animal):
     the Dog type
     """
     def bark(self, n):
-        return "Meow! " * n
+        return "Meow! " * n  # bug! FIXME
 
 
 if __name__ == "__main__":
