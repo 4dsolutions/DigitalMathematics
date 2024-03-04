@@ -21,6 +21,9 @@ class Animal:
         "Add a food to my stomach"
         self.stomach.append(food)
 
+    def __call__(self, food):
+        self.eat(food)
+
     def __repr__(self):
         "Repper -- represent me"
         return f"a {type(self).__name__} named {self.name}"
@@ -51,5 +54,7 @@ if __name__ == "__main__":
     print(kitty)
     rover.eat(kitty)
     print(rover.stomach)
-    rover.eat(rover)
+    rover(rover)
     print(rover.stomach)
+    new_animal = rover + kitty
+    print(new_animal)
